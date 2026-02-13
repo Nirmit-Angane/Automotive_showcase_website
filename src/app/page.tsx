@@ -31,8 +31,6 @@ export default function Home() {
                                         audio.play().catch(e => console.log("Audio play failed:", e));
                                     }
                                 }}
-                                    }
-                                }}
                                 onMouseEnter={() => {
                                     const audio = new Audio("/sounds/click.mp3");
                                     audio.volume = 0.2;

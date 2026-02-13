@@ -4,6 +4,7 @@ import { BrandHero } from "@/components/brand/BrandHero"
 import { SpecsTable } from "@/components/brand/SpecsTable"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 import { Navbar } from "@/components/layout/Navbar"
+import { BrandGallery } from "@/components/brand/BrandGallery"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -67,10 +68,8 @@ export default function BrandPage({ params }: { params: { slug: string } }) {
                 </div>
             </section>
 
-            {/* Placeholder Gallery Section */}
-            <section className="h-[50vh] bg-concrete-gray/10 border-y-2 border-concrete-gray flex items-center justify-center">
-                <p className="font-tech text-xl text-gray-600">/// VISUAL_DATA_MISSING_PENDING_GENERATION</p>
-            </section>
+            {/* Gallery Section */}
+            <BrandGallery brandSlug={brand.slug} brandColor={brand.color} />
         </main>
     )
 }
