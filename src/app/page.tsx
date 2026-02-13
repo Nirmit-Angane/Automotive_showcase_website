@@ -31,15 +31,17 @@ export default function Home() {
                                         audio.play().catch(e => console.log("Audio play failed:", e));
                                     }
                                 }}
+                                    }
+                                }}
                                 onMouseEnter={() => {
                                     const audio = new Audio("/sounds/click.mp3");
                                     audio.volume = 0.2;
                                     audio.play().catch(e => console.log("Audio play failed:", e));
                                 }}
-                                className="group relative h-[400px] bg-brutal-black p-8 flex flex-col justify-between hover:bg-racing-red transition-colors duration-0 cursor-pointer overflow-hidden"
+                                className="group relative h-[300px] md:h-[400px] bg-brutal-black p-6 md:p-8 flex flex-col justify-between hover:bg-racing-red transition-colors duration-0 cursor-pointer overflow-hidden"
                             >
-                                <div className="font-heading text-4xl z-10 group-hover:text-black transition-colors duration-300">{brand.name}</div>
-                                <div className="font-tech text-xs opacity-50 z-10 group-hover:text-black group-hover:opacity-100 transition-all duration-300">
+                                <div className="font-heading text-3xl md:text-4xl z-10 group-hover:text-black transition-colors duration-300 break-words">{brand.name}</div>
+                                <div className="font-tech text-[10px] md:text-xs opacity-50 z-10 group-hover:text-black group-hover:opacity-100 transition-all duration-300">
                   /// VIEW COLLECTION
                                 </div>
 
@@ -59,9 +61,17 @@ export default function Home() {
                 </div>
             </section>
 
-            <footer className="py-12 text-center font-tech text-sm opacity-30 bg-brutal-black text-white">
-                © 2026 PREMIUM AUTOMOTIVE SHOWCASE /// ALL RIGHTS RESERVED
+            <footer className="py-12 flex flex-col items-center justify-center gap-4 font-tech text-sm opacity-50 bg-brutal-black text-white">
+                <div>© 2026 PREMIUM AUTOMOTIVE SHOWCASE /// ALL RIGHTS RESERVED</div>
+                <a
+                    href="https://github.com/Nirmit-Angane/Automotive_showcase_website"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-racing-red transition-colors duration-300"
+                >
+                    /// SOURCE CODE: GITHUB_REPO
+                </a>
             </footer>
-        </main>
+        </main >
     );
 }
